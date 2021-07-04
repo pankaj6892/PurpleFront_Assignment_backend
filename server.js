@@ -1,6 +1,13 @@
 const express = require('express');
 const connectDB = require('./config/db');
 const app = express();
+const cors = require('cors');
+
+app.use(cors());
+
+// app.get('/', function (req, res, next) {
+//   res.json({ msg: 'This is CORS-enabled for all origins!' });
+// });
 
 connectDB();
 
